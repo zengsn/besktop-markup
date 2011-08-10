@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Version" content="[α0.3] 20100325; charset=UTF-8">
+<meta name="alexaVerifyID" content="SIGW5Jg-Oke5Bx4SJAT8UjNCJqM" />
+<title>Besktop - A pure standard implementation of Web Desktop</title>
+<link rel="shortcut icon" href="./besktop/a0.1/img/favicon.ico" />
+<link rel="icon" href="./besktop/a0.1/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./3rdp/ext/3.3.1/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="./3rdp/ext/3.3.1/resources/css/xtheme-human1.css" />
+<!-- for test -->
+<link rel="stylesheet" type="text/css" href="./3rdp/ext/3.3.1/examples/shared/examples.css" />
+<link rel="stylesheet" type="text/css" href="./3rdp/ext/3.3.1/examples/grid/multiple-sorting.css" />
+
+<!-- Z-WEBTOP-STYLES -->
+<link rel="stylesheet" type="text/css" href="./resources/css/icons.css" />
+<link rel="stylesheet" type="text/css" href="./resources/css/overrides.css" />
+<link rel="stylesheet" type="text/css" href="./resources/css/webtop1.css" />
+<link rel="stylesheet" type="text/css" href="./besktop/a0.1/css/button.css" />
+<link rel="stylesheet" type="text/css" href="./besktop/a0.1/css/desktop.css" />
+<link rel="stylesheet" type="text/css" href="./webwares/bt-about/a1.0/css/webware.css" />
+<link rel="stylesheet" type="text/css" href="./webwares/bt-help/a1.0/css/webware.css" />
+<link rel="stylesheet" type="text/css" href="./webwares/bt-preference/a1.0/css/webware.css" />
+<link rel="stylesheet" type="text/css" href="./webwares/webim/a1.0/css/webware.css" />
+<!-- Z-WEBTOP-STYLES-END -->
+<!-- GC -->
+<!-- LIBS -->
+<script type="text/javascript" src="./3rdp/ext/3.3.1/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/ext-all.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/src/locale/ext-lang-zh_CN.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/examples/ux/Reorderer.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/examples/ux/ToolbarReorderer.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/examples/ux/DataViewTransition.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/examples/ux/Reorderer.js"></script>
+<script type="text/javascript" src="./3rdp/ext/3.3.1/examples/ux/ToolbarReorderer.js"></script>
+<script type="text/javascript" src="./3rdp/ext/ux/miframe2_1/build/miframe-debug.js"></script>
+<script type="text/javascript" src="./3rdp/ext/z-ux/Z.ux.AnimateWindow.js"></script>
+<!-- ENDLIBS -->
+<!-- Z-WEBTOP-COMPONENTS -->
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.Initialization.js"></script>
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.AppMenu.js"></script>
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.TaskBar.js"></script>
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.Desktop.js"></script>
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.System.js"></script>
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.Webware.js"></script>
+<!--
+<script type="text/javascript" src="./webtop/Widget.js"></script>
+-->
+<!-- Z-WEBTOP-BOOTER -->
+<!-- Booting webwares -->
+<script type="text/javascript" src="./webwares/bt-preference/a1.0/js/class.js"></script>
+<script type="text/javascript" src="./webwares/bt-help/a1.0/js/class.js"></script>
+<script type="text/javascript" src="./webwares/bt-about/a1.0/js/class.js"></script>
+<script type="text/javascript" src="./webwares/webim/a1.0/js/App.webware.WebIm.TSinaPanel.js"></script>
+<script type="text/javascript" src="./webwares/webim/a1.0/js/class.js"></script>
+<script type="text/javascript" src="./webwares/ui-animwindow/a1.0/js/class.js"></script>
+<script type="text/javascript" src="./besktop/a0.1/js/BT.core.Booter.js"></script>
+<!-- Z-WEBTOP-BOOTER-END -->
+<script type="text/javascript" src="./besktop/a0.1/js/Testing1.js"></script>
+<script type="text/javascript">
+<!--
+Ext.QuickTips.init();
+Ext.form.Field.prototype.msgTarget = 'side';
+Ext.BLANK_IMAGE_URL='./3rdp/ext/3.3.1/resources/images/default/s.gif';
+String.prototype.ellipse = function(maxLength){
+    if(this.length > maxLength){
+        return this.substr(0, maxLength-3) + '...';
+    }
+    return this;
+};
+// Constants
+// Google Analytics ///////////////////////////////////
+// Google Analytics End ///////////////////////////////
+//-->
+</script>
+</head>
+<body scroll="no">
+
+<div id="canvas" class="bt-desktop-canvas">
+    <div id="bt-desktop-shortcuts">
+		<ul>
+			<li>
+				<div id="bt-preference-shortcut">
+					<a href="./?webware=bt-preference">首选项</a>
+				</div>
+			</li>
+			<li>
+				<div id="bt-help-shortcut">
+					<a href="./?webware=bt-help">帮助文档</a>
+				</div>
+			</li>
+			<li>
+				<div id="bt-about-shortcut">
+					<a href="./?webware=bt-about">关于我们</a>
+				</div>
+			</li>
+		</ul>
+    </div>
+	<div id="cnzz">
+		<script src="http://s17.cnzz.com/stat.php?id=2904925&web_id=2904925&show=pic1" language="JavaScript"></script>
+	</div>
+	<div id="bt-message-ct"></div>
+	<div id="bt-desktop-widgets">
+		<!-- Markup Widgets -->
+		<!-- Image Widget Example -->
+		<div id="bt-logo" class="bt-desktop-widget" style="width: 200px;">
+			<div class="bt-widget-image" style="text-align:center;">
+				<img class="bt-widget-image" src="./besktop/a0.1/img/besktop-src.png" style="position:fixed; top:30px; right:5px;" 
+				alt="Besktop means Web Desktop." title="Besktop means Web Desktop."/> 
+			</div>
+		</div>
+		<!-- Text Widget Example -->
+		<!--
+		<div id="simple-text-widget" class="bt-desktop-widget" style="width: 300px; position:fixed; top:0px; right:5px;">
+			<div class="bt-widget-body">
+				<a href="http://zsn.cc/" style="margin:5px;text-align:center;"> 
+					<img src="./besktop/a0.1/img/besktop-src.png" /> 
+				</a> 
+				<p style="margin:5px;text-align:center;">Besktop means Web Desktop.</p>
+			</div>
+		</div>
+		-->
+		<!-- Panel Widget Example -->
+		<div id="widget-with-title" class="bt-desktop-widget" style="width: 400px; position:fixed; bottom:50px; right:5px;">
+			<div class="bt-widget-title">
+				Widget with Title
+			</div>
+			<div class="bt-widget-body">
+				<p>This is widget body markup, you can put any HTML markup here.</p>
+				<p>If you want to have full control of Ext.Panel configuration, you have to use dynamic widget from widgets.xml.</p>
+			</div>
+			<div class="bt-widget-footer">
+				widget footer information, as TextItem on bbar.
+			</div>
+		</div>
+		<!-- Dynamic widgets come from widgets.xml. -->
+	</div>
+</div>
+
+</body>
+</html>

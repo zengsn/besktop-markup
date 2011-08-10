@@ -1,0 +1,30 @@
+.x-btn-default-large .bt-system-button {
+    background-image: url(../img/system48.png) !important;
+}
+.bt-start-button {
+    background-image: url(../img/besktop-32.png) !important;
+}
+.bt-theme-button {
+    background-image: url(../img/Colors-32.png) !important;
+}
+.bt-desktop-message-icon {
+	background-image: url("../img/info-16.png") !important;
+}
+.bt-desktop-message-icon-large{ 
+	background-image: url("../img/info-32.png") !important;
+}
+.bt-desktop-message-error-icon {
+	background-image: url("../img/error-16.png") !important;
+}
+.bt-desktop-message-error-icon-large {
+	background-image: url("../img/error-32.png") !important;
+}
+.bt-close {
+    background-image: url(../img/close-16.png) !important;
+}
+.bt-default-32 {
+    background-image: url(../img/default-32.png) !important;
+}
+.bt-default-16 {
+    background-image: url(../img/default-16.png) !important;
+}

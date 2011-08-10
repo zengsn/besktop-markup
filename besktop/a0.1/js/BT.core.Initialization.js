@@ -1,0 +1,9 @@
+/**  * 任务栏。  * @since 4.0  * @author http://zsn.cc  */Ext.namespace("BT.core");/** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *  * 任务栏                                                             *  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ **/  
+BT.core.Initialization = {};
+BT.core.Initialization.WEBWARE_ARRAY = new Array();
+BT.core.Initialization.ADD_WEBWARE = function(webware) {
+	return BT.core.Initialization.WEBWARE_ARRAY.push(webware);
+};
+BT.core.Initialization.GET_WEBWARES = function() {
+	return BT.core.Initialization.WEBWARE_ARRAY;
+};function getAppMenuAlign(taskbarPos) {	if ('north'==taskbarPos) return 'tl-bl';	else if ('south'==taskbarPos) return 'bl-tl';	else if ('west'==taskbarPos) return 'tl-bl';	else if ('east'==taskbarPos) return 'tr-br';};var getParams = document.URL.split("?");if (getParams.length > 0) {	// transforming the GET parameters into a dictionnary	var params = Ext.urlDecode(getParams[getParams.length - 1]);	BT.core.Initialization.PARAMS = params;	// 查找自动启动路径 	var webwareId = params.webware;	var windowId = params.window;	if (webwareId) { // 		var webware = this.getWebware(webwareId + '-win');		if (webware) {			//var path = webwareId + '-' + windowId + '-win';			//webware.createWindow({windowId: path});			BT.core.Initialization.AUTO_START = {				webware: webware,				window: windowId			};		}	}	// 查找配置	var taskbarPos = params.taskbar ? params.taskbar : 'north';	BT.core.Initialization.CONFIG = {		// 任务栏位置		taskbarPos: taskbarPos,		appMenuAlign: getAppMenuAlign(taskbarPos)	};}

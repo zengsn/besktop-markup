@@ -1,0 +1,47 @@
+.bt-desktop-body {
+	background-image:url('../img/bg_penguin.jpg');
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+.bt-menu {
+	background-image: 64 0 !important;
+}
+.bt-menu-item {
+	line-height: 32px !important;
+	padding-left: 40px;
+}
+.bt-menu-item-over {
+	background-image: url("../img/s.gif") !important;
+}
+.bt-menu-item-icon {
+	height: 32px;
+	width: 32px;
+}
+
+
+/* 快捷方式 */
+#bt-desktop-shortcuts {
+	padding: 5px;
+}
+#bt-desktop-shortcuts ul{
+}
+#bt-desktop-shortcuts ul li{
+}
+#bt-desktop-shortcuts div{
+}
+
+/* 提示消息 */
+#bt-desktop-message-icon {
+	width: 32px;
+	height: 32px;
+	background-image: no-repreat;
+}
+#bt-desktop-message-text {
+	font-size: 13px,
+	vertical-align: middle;
+}
+
+/* Widget */
+.bt-widget-image {
+	z-index: 100;
+}
